@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+
+}
+
+body {
+  font-family: sans;
+}
+
+#wrap {
+  text-align: center;
+  margin: 1em;
+}
+
+#pad {
+  padding: 2em;
+  overflow:hidden;
+  margin: 0 auto;  
+}
+
+.site-logo {
+  margin-top: 0em;
+  width: 100%;
+}
+
+.content {
+  text-align: left;
+}
+
+a {
+  color: #900;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
