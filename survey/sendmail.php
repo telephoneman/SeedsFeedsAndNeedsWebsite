@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "oesafespaces@gmail.com";
-$EmailTo = "prgunited@yahoo.com";
+$EmailTo = "oesafespaces@gmail.com";
 $Name = Trim(stripslashes($_POST['Name']));
 $Subject = "Evaluation from $Name";
 $Work = Trim(stripslashes($_POST['Workrating']));
@@ -29,7 +29,7 @@ $success = mail($EmailTo,$Subject,$Body,"From: SFNC\n");
 
 
 
-mail($EmailTo,$Subject,$Body,"From: oesafespaces@gmail.com\n");
+
   print "<meta http-equiv=\"refresh\" content=\"0;URL=thanks.php\">";
 
 ?>
