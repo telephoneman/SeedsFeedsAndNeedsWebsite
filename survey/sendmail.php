@@ -29,7 +29,7 @@ $success = mail($EmailTo,$Subject,$Body,"From: SFNC\n");
 
 
 
-mail($EmailTo,$Subject,$Body,"From: SFNC\n");
+mail($EmailTo,$Subject,$Body,"From: oesafespaces@gmail.com\n");
   print "<meta http-equiv=\"refresh\" content=\"0;URL=thanks.php\">";
 
 ?>
