@@ -14,8 +14,6 @@ if($_POST["submit"]) {
     $thankYou="<p>Thank you! Your message has been sent.</p>";
 }
 
-?><!DOCTYPE html>
-
 <html lang="en">
 	<meta charset="utf-8" />
 <head>		
@@ -129,7 +127,7 @@ body {
 
     <?=$thankYou ?>
 
-    <form method="post" action="contact.php">
+    <form method="post" action="contact1.php">
         <label>Name:</label>
         <input name="sender">
 
