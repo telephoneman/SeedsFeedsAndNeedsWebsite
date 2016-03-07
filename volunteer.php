@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+
+if($_POST["submit"]) {
+    $recipient="jesse.macdonald.sfo@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -115,13 +131,21 @@ body {
 	<div id="wrapper" align="left">
 	<a href="https://www.facebook.com/groups/107127302808643/"><img src="http://seedsfeedsandneeds.org/img/sfnclogo.jpg" title="alt text goes here" align="left"/></a>
 
-	<p align="center"><i>Seeds Feeds and Needs</i> is a radical organic food co-opertive located within Edmonton Alberta.  Started as an <a href="https://www.facebook.com/OccupyEdmonton" target="_blank">Occupy Edmonton working group</a> in 2012, we now grow food in gardens all throughout the city and beyond.  We are a non-hierarchical organization that works under the premise of <a href="https://librivox.org/mutual-aid-a-factor-of-evolution-by-peter-kropotkin/" target="_blank">mutual aid</a> with the belief that access to food is a right.
-	<br/> <br/></p>
-	<p align="center">We are currently looking for garden space, tools, and volunteers.<br/> 
-	If you are able to help, please <a href="https://www.facebook.com/groups/107127302808643/" target="_blank">join our Facebook group</a> for meeting time information. <br/> 
-	Alternatively, you can contact us at <a href="mailto:seedsfeedsandneeds@outlook.com">seedsfeedsandneeds@outlook.com</a><br/> 
-	Food will be available to order toward the end of the season.
-	<br/><br/></p>
+	<p align="center"><i>Say something about yourself!/i>
+	 <?=$thankYou ?>
+
+    <form method="post" action="contact.php">
+        <label>Name:</label>
+        <input name="sender">
+
+        <label>Email address:</label>
+        <input name="senderEmail">
+
+        <label>Message:</label>
+        <textarea rows="5" cols="20" name="message"></textarea>
+
+        <input type="submit" name="submit">
+    </form>
 <center>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_s-xclick">
