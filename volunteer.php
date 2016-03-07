@@ -60,7 +60,7 @@ if($_POST["submit"]) {
 		<li><a href="http://seedsfeedsandneeds.com/events.html">Events</a></li>
 		<li><a href="http://seedsfeedsandneeds.com/where.html">Where We Meet</a></li>
 		<li><a href="http://www.seedsfeedsandneeds.com/contact1.html">Contact</a></li>
-		<li><a href="http://www.seedsfeedsandneeds.com/volunteer.html">Volunteer</a></li>
+		<li><a href="http://www.seedsfeedsandneeds.com/volunteer.php">Volunteer</a></li>
 	</ul>
 	
 	
@@ -131,10 +131,10 @@ body {
 	<div id="wrapper" align="left">
 	<a href="https://www.facebook.com/groups/107127302808643/"><img src="http://seedsfeedsandneeds.org/img/sfnclogo.jpg" title="alt text goes here" align="left"/></a>
 
-	<p align="center"><i>Say something about yourself!/i>
+	<p align="center"><i>Say something about yourself!</i>
 	 <?=$thankYou ?>
 
-    <form method="post" action="volunteer.php">
+    <form method="post" action="www.seedsfeedsandneeds.org/volunteer.php">
         <label>Name:</label>
         <input name="sender">
 
