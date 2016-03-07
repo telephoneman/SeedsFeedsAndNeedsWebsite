@@ -134,7 +134,7 @@ body {
 	<p align="center"><i>Say something about yourself!/i>
 	 <?=$thankYou ?>
 
-    <form method="post" action="contact.php">
+    <form method="post" action="volunteer.php">
         <label>Name:</label>
         <input name="sender">
 
