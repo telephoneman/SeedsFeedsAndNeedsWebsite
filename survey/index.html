@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Worker Evaluation</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+<script>
+        function check(obj)
+        {
+            if (obj.value.trim() != "") {
+                document.getElementById("submit").disabled = false;
+            }
+            else {
+                document.getElementById("submit").disabled = true;
+            }
+        }
+</script>
+</head>
+
+<body>
+
+	<div id="page-wrap">
+
+		<img src="http://seedsfeedsandneeds.org/img/sfnclogo.jpg" alt="Worker Evaluation" />  <br /><br />
+				<h1>Evaluation Form</h1> <br /><br />
+				<p>Please specify how satisfied you are with the quality of work done on your property, as well as how comfortable you are with the behaviour of the volunteers.  It is important to report all serious issues, so that we can find new people to work with you if necessary.</p>
+		
+
+				
+		<div id="contact-area">
+			
+			<form method="post" action="sendmail.php">
+				<label for="Name">Name:</label>
+				<input type="text" name="Name" id="Name" onblur="return check(this);" />
+				
+	<div id="radio-area">
+
+								<label for="Work">Work performance:</label>
+				<input type="radio" name="Workrating" value="1"  />1 
+				<input type="radio" name="Workrating" value="2"  />2
+				<input type="radio" name="Workrating" value="3" />3
+				<input type="radio" name="Workrating" value="4" />4
+				<input type="radio" name="Workrating" value="5"  />5 (Very pleased)
+<br/><br/>
+
+								<label for="Comfort">Your comfort:</label>
+				<input type="radio" name="Comfortrating" value="1"  />1 
+				<input type="radio" name="Comfortrating" value="2"  />2
+				<input type="radio" name="Comfortrating" value="3" />3
+				<input type="radio" name="Comfortrating" value="4" />4
+				<input type="radio" name="Comfortrating" value="5"  />5 (Most Comfortable)
+<br/><br/>
+</div>
+
+				<label for="Message">Additional comments:</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+				<input id="submit" type="submit" name="submit" value="Submit" class="submit-button" disabled="true" />
+			</form>
+			
+			<div style="clear: both;"></div>
+			
+
+		
+		</div>
+	
+	</div>
+
+</body>
+
+</html>
